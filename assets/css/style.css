@@ -18,7 +18,8 @@ body {
     background-color: #ffdab9;
     padding: 22px 4px;
     height: 450px;
-    width: 400px;
+    width: 410px;
+    margin-left: 15px;
 }
 #number {
     color: #800080;
@@ -26,6 +27,7 @@ body {
     height: 100px;
     margin-top: 10px;
     margin-bottom: 15px;
+    padding-left: 4px;
 }
 .score {
     color: #006400;
@@ -38,13 +40,8 @@ body {
 .crystals {
     height: 100px;
     width: 100px;
-}
-.totalScore {
-    width: 250px;
-    background-color: #0077be;
-    color: #FFFFFF;
-    height: 20px;
-    
+    margin-top: -5px;
+    margin-bottom: 7px;
 }
 #totalScoreBox {
     width: 250px;
@@ -59,7 +56,38 @@ body {
 }
 #scoreWinText {
     margin-top: 20px;
+} 
+.score {
+    padding-left: 7px;
 }
-.scoreText {
+#totalScoreHeader {
     text-align: left;
+    width: 210px;
+    background-color: #0077be;
+    color: #FFFFFF;
+    height: 20px;
+    padding-left: 4px;
+    margin-bottom: 0px;
 }
+#totalScoreBox {
+    text-align: left;
+    padding-left: 4px;
+    color: #FFFFFF;
+    background-color: #0077be;
+    width: 210px;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#redCrystal {
+    
+} 
+#blueCrystal {
+    margin-left: 10px
+} 
+#yellowCrystal {
+    margin-left: 20.5px;
+} 
+#greenCrystal {
+    margin-left: 32px;
+} 
