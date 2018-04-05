@@ -1,0 +1,65 @@
+* {
+    font-family: none;
+}
+
+body {
+    background-image: url("../images/weather.png")
+}
+#headerText {
+    color: #FFFFFF;
+    background-color: #A55D35;
+    padding: 30px 0px;
+    font-size: 28px;
+    text-align: center;
+    width: 227px;
+}
+.instructionsBox {
+    color: #228b22;
+    background-color: #ffdab9;
+    padding: 22px 4px;
+    height: 450px;
+    width: 400px;
+}
+#number {
+    color: #800080;
+    background-color: #008000;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.score {
+    color: #006400;
+    background-color: #40E0D0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100px;
+    width: 70px;
+}
+.crystals {
+    height: 100px;
+    width: 100px;
+}
+.totalScore {
+    width: 250px;
+    background-color: #0077be;
+    color: #FFFFFF;
+    height: 20px;
+    
+}
+#totalScoreBox {
+    width: 250px;
+    background-color: #0077be;
+    color: #FFFFFF;
+    height: 20px;
+}
+#instructionsText {
+    width: 398px;
+    font-size: 17px;
+    padding-right: 0px;
+}
+#scoreWinText {
+    margin-top: 20px;
+}
+.scoreText {
+    text-align: left;
+}
