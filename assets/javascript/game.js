@@ -14,7 +14,7 @@ var userNum = 0;
 
 //onKeyUp()
 document.onclick = function(userInput) {
-    var userNum = userInput.onclick 
+    var click = userInput.onclick 
 
 // jQuery .onClick events
 
