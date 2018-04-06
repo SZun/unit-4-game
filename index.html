@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Latest compiled and minified CSS -->
+
+
+    <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -15,9 +17,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Game</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"> 
@@ -45,7 +47,7 @@
             </div>
         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 score">   
             <p id="scoreWinText">Wins: </p>
-            <p>Losses: </p>
+            <p id="scoreLossText">Losses: </p>
             </div>
     </div>
 </div>
@@ -73,8 +75,7 @@
             <p id="totalHeader">Your total score is:</p>
             <h2 id="totalBox">0</h2>
         </div>
-    </div>
 </div>
-
+</div>
 </body>
 </html>
