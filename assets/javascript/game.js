@@ -1,5 +1,4 @@
 // To be fixed
-    //Do I need to add a variable to the $("totalBox").push(userNum);
 
 
 //Variables
@@ -18,20 +17,27 @@ $(document).ready(function() {
 //If Red Crystal Clicked
 $("#redCrystal").on("click", function() {
     //generate red cystal number
+    var redNumGen = Math.floor(Math.random() * 20 + 1);
     //Add Random number for red to 
     userNum + redNumGen;
     console.log(userNum);
     console.log(redNumGen);
+    console.log(userNum + redNumGen);
     //If userNum is equal to target
     if (userNum === trgtGen) {
         //alert win 
         alert("Hooray you won!");
         //wins goes up
         wins++;
-        //Select new red crystal number
+        //Select new crystal numbers
         var redNumGen = Math.floor(Math.random() * 20 + 1);
+        var yellowNumGen = Math.floor(Math.random() * 20 + 1);
+        var blueNumGen = Math.floor(Math.random() * 20 + 1);
+        var greenNumGen = Math.floor(Math.random() * 20 + 1);
         //Select new target
         var trgtGen = Math.floor(Math.random() * 175 + 30);
+        //reset userNum
+        userNum = 0;
     }
     //If userNum is larger than  
     else if (userNum > trgtGen) {
@@ -43,10 +49,13 @@ $("#redCrystal").on("click", function() {
          var redNumGen = Math.floor(Math.random() * 20 + 1);
          //Select new target
          var trgtGen = Math.floor(Math.random() * 175 + 30);   
+         //reset userNum
+         userNum = 0;
     }
     //Push new userNum to users total
     else  {
-        $("totalBox").push(userNum);
+        $("totalBox").push(userNum + redNumGen);
+        $("#totalBox").html(userNum + redNumGen);
     }
 }),
 //If Red Crystal Clicked
@@ -78,7 +87,7 @@ $("#blueCrystal").on("click", function() {
     }
     //Add new userNum to users total
     else {
-        $("totalBox").push(userNum);
+        $("totalBox").push(userNum + redNumGen);
     }
 }),
 //If Red Crystal Clicked
@@ -149,7 +158,6 @@ $("#yellowCrystal").on("click", function() {
 $("#number").html(trgtGen); 
 // $("#number").text(trgtGen);
 // $("#number").append(trgtGen);
-$("#totalBox").html(userNum);
 $("#scoreLossText").html("Losses: " + losses);
 $("#scoreWinText").html("Wins: " + wins);
 $("#redCrystal").html(redNumGen);
