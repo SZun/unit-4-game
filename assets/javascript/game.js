@@ -44,16 +44,16 @@ $("#redCrystal").on("click", function() {
          //Select new target
          var trgtGen = Math.floor(Math.random() * 175 + 30);   
     }
-    //Add new userNum to users total
-    else if (userNum != trgtGen) {
+    //Push new userNum to users total
+    else  {
         $("totalBox").push(userNum);
     }
-});
+}),
 //If Red Crystal Clicked
 $("#blueCrystal").on("click", function() {
     //Functions
     //Add Random number for blue to userNum
-    userNum += blueNumGen;
+    userNum + blueNumGen;
     //If userNum is equal to target
     if (userNum === trgtGen) {
         //alert win 
@@ -80,12 +80,12 @@ $("#blueCrystal").on("click", function() {
     else {
         $("totalBox").push(userNum);
     }
-});
+}),
 //If Red Crystal Clicked
 $("#greenCrystal").on("click", function() {
     //Functions
     //Add Random number for green to userNum
-    userNum += greenNumGen;
+    userNum + greenNumGen;
     //If userNum is equal to target
     if (userNum === trgtGen) {
         //alert win 
@@ -112,11 +112,11 @@ $("#greenCrystal").on("click", function() {
     else {
         $("totalBox").push(userNum);
     }
-});
+}),
 //If Red Crystal Clicked
 $("#yellowCrystal").on("click", function() {
     //Add Random number for yellow to userNum
-    userNum += yellowNumGen;
+    userNum + yellowNumGen;
     //If userNum is equal to target
     if (userNum === trgtGen) {
         //alert win 
