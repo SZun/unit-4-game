@@ -1,5 +1,4 @@
 // To be fixed
-//make js logic functions, and separate them from the jquery
 var redNumGen = Math.floor(Math.random() * 20 + 1);
 var yellowNumGen = Math.floor(Math.random() * 20 + 1);
 var blueNumGen = Math.floor(Math.random() * 20 + 1);
