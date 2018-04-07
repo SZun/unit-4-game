@@ -1,8 +1,7 @@
 // To be fixed
-
-
-//Variables
+//make js logic functions, and separate them from the jquery
 var redNumGen = Math.floor(Math.random() * 20 + 1);
+console.log(redNumGen)
 var yellowNumGen = Math.floor(Math.random() * 20 + 1);
 var blueNumGen = Math.floor(Math.random() * 20 + 1);
 var greenNumGen = Math.floor(Math.random() * 20 + 1);
@@ -13,16 +12,18 @@ var userNum = 0;
 
 //Start the script
 $(document).ready(function() {
+//Variables
+
 // jQuery .onClick events & functions
+
 //If Red Crystal Clicked
 $("#redCrystal").on("click", function() {
     //generate red cystal number
-    var redNumGen = Math.floor(Math.random() * 20 + 1);
+    // var redNumGen = Math.floor(Math.random() * 20 + 1);
     //Add Random number for red to 
-    userNum + redNumGen;
+    userNum += window.redNumGen;
     console.log(userNum);
-    console.log(redNumGen);
-    console.log(userNum + redNumGen);
+    console.log(window.redNumGen);
     //If userNum is equal to target
     if (userNum === trgtGen) {
         //alert win 
@@ -54,10 +55,10 @@ $("#redCrystal").on("click", function() {
     }
     //Push new userNum to users total
     else  {
-        $("totalBox").push(userNum + redNumGen);
-        $("#totalBox").html(userNum + redNumGen);
+        // $("totalBox").push(userNum + redNumGen);
+        $("#totalBox").html(userNum);
     }
-}),
+})
 //If Red Crystal Clicked
 $("#blueCrystal").on("click", function() {
     //Functions
@@ -89,7 +90,7 @@ $("#blueCrystal").on("click", function() {
     else {
         $("totalBox").push(userNum + redNumGen);
     }
-}),
+})
 //If Red Crystal Clicked
 $("#greenCrystal").on("click", function() {
     //Functions
@@ -121,7 +122,7 @@ $("#greenCrystal").on("click", function() {
     else {
         $("totalBox").push(userNum);
     }
-}),
+})
 //If Red Crystal Clicked
 $("#yellowCrystal").on("click", function() {
     //Add Random number for yellow to userNum
