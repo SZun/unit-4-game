@@ -12,8 +12,8 @@ var wins = 0;
 var losses = 0;
 var userNum = 0;
 
-//onclick()
-document.onclick = function(userInput) {
+//Start the script
+$(document).ready(function() {
 // jQuery .onClick events & functions
 //If Red Crystal Clicked
 $("#redCrystal").on("click", function() {
@@ -156,5 +156,5 @@ $("#redCrystal").html(redNumGen);
 $("#blueCrystal").html(blueNumGen);
 $("#greenCrystal").html(greenNumGen);
 $("#yellowCrystal").html(yellowNumGen);
-};
+});
 
