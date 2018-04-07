@@ -1,5 +1,5 @@
 // To be fixed
-    //Do I need to add a variable to the $("totalBox").push(+ userNum); line in place of $("totalBox")
+    //Do I need to add a variable to the $("totalBox").push(userNum);
 
 
 //Variables
@@ -12,16 +12,16 @@ var wins = 0;
 var losses = 0;
 var userNum = 0;
 
-//onKeyUp()
+//onclick()
 document.onclick = function(userInput) {
-    var click = userInput.onclick 
-
-// jQuery .onClick events
-
+// jQuery .onClick events & functions
 //If Red Crystal Clicked
 $("#redCrystal").on("click", function() {
+    //generate red cystal number
     //Add Random number for red to 
-    userNum += redNumGen;
+    userNum + redNumGen;
+    console.log(userNum);
+    console.log(redNumGen);
     //If userNum is equal to target
     if (userNum === trgtGen) {
         //alert win 
@@ -45,7 +45,7 @@ $("#redCrystal").on("click", function() {
          var trgtGen = Math.floor(Math.random() * 175 + 30);   
     }
     //Add new userNum to users total
-    else {
+    else if (userNum != trgtGen) {
         $("totalBox").push(userNum);
     }
 });
@@ -143,7 +143,7 @@ $("#yellowCrystal").on("click", function() {
     else {
         $("totalBox").push(userNum);
     }
-});
+})
 
 //html
 $("#number").html(trgtGen); 
