@@ -1,7 +1,6 @@
 // To be fixed
 //make js logic functions, and separate them from the jquery
 var redNumGen = Math.floor(Math.random() * 20 + 1);
-console.log(redNumGen)
 var yellowNumGen = Math.floor(Math.random() * 20 + 1);
 var blueNumGen = Math.floor(Math.random() * 20 + 1);
 var greenNumGen = Math.floor(Math.random() * 20 + 1);
@@ -18,12 +17,49 @@ $(document).ready(function() {
 
 //If Red Crystal Clicked
 $("#redCrystal").on("click", function() {
-    //generate red cystal number
-    // var redNumGen = Math.floor(Math.random() * 20 + 1);
     //Add Random number for red to 
     userNum += window.redNumGen;
-    console.log(userNum);
-    console.log(window.redNumGen);
+    //If userNum is equal to target
+    if (userNum === trgtGen) {
+        console.log (userNum)
+        console.log(trgtGen)
+        //alert win 
+        alert("Hooray you won!");
+        //wins goes up
+        wins++;
+        //Select new crystal numbers
+        var redNumGen = Math.floor(Math.random() * 20 + 1);
+        var yellowNumGen = Math.floor(Math.random() * 20 + 1);
+        var blueNumGen = Math.floor(Math.random() * 20 + 1);
+        var greenNumGen = Math.floor(Math.random() * 20 + 1);
+        //Select new target
+        var trgtGen = Math.floor(Math.random() * 175 + 30);
+        //reset userNum
+        // userNum = 0;
+    }
+    //If userNum is larger than  
+    else if (userNum > trgtGen) {
+         //loss goes up
+         losses++;
+         //alert loss
+         alert("Sorry, you lost :(");
+         //Select new red crystal number
+         var redNumGen = Math.floor(Math.random() * 20 + 1);
+         //Select new target
+         var trgtGen = Math.floor(Math.random() * 175 + 30);   
+         //reset userNum
+         userNum = 0;
+    }
+    //Push new userNum to users total
+    else  {
+        // $("totalBox").push(userNum + redNumGen);
+        $("#totalBox").html(userNum);
+    }
+})
+//If Red Crystal Clicked
+$("#blueCrystal").on("click", function() {
+    //Add Random number for red to 
+    userNum += window.blueNumGen;
     //If userNum is equal to target
     if (userNum === trgtGen) {
         //alert win 
@@ -60,52 +96,24 @@ $("#redCrystal").on("click", function() {
     }
 })
 //If Red Crystal Clicked
-$("#blueCrystal").on("click", function() {
-    //Functions
-    //Add Random number for blue to userNum
-    userNum + blueNumGen;
-    //If userNum is equal to target
-    if (userNum === trgtGen) {
-        //alert win 
-        alert("Hooray you won!");
-        //wins goes up
-        wins++;
-        //Select new red crystal number
-        var blueNumGen = Math.floor(Math.random() * 20 + 1);
-        //Select new target
-        var trgtGen = Math.floor(Math.random() * 175 + 30);
-    }
-    //If userNum is larger than  
-    else if (userNum > trgtGen) {
-         //loss goes up
-         losses++;
-         //alert loss
-         alert("Sorry, you lost :(");
-         //Select new red crystal number
-         var blueNumGen = Math.floor(Math.random() * 20 + 1);
-         //Select new target
-         var trgtGen = Math.floor(Math.random() * 175 + 30);  
-    }
-    //Add new userNum to users total
-    else {
-        $("totalBox").push(userNum + redNumGen);
-    }
-})
-//If Red Crystal Clicked
 $("#greenCrystal").on("click", function() {
-    //Functions
-    //Add Random number for green to userNum
-    userNum + greenNumGen;
+    //Add Random number for red to 
+    userNum += window.greenNumGen;
     //If userNum is equal to target
     if (userNum === trgtGen) {
         //alert win 
         alert("Hooray you won!");
         //wins goes up
         wins++;
-        //Select new red crystal number
+        //Select new crystal numbers
+        var redNumGen = Math.floor(Math.random() * 20 + 1);
+        var yellowNumGen = Math.floor(Math.random() * 20 + 1);
+        var blueNumGen = Math.floor(Math.random() * 20 + 1);
         var greenNumGen = Math.floor(Math.random() * 20 + 1);
         //Select new target
         var trgtGen = Math.floor(Math.random() * 175 + 30);
+        //reset userNum
+        userNum = 0;
     }
     //If userNum is larger than  
     else if (userNum > trgtGen) {
@@ -114,29 +122,36 @@ $("#greenCrystal").on("click", function() {
          //alert loss
          alert("Sorry, you lost :(");
          //Select new red crystal number
-         var greenNumGen = Math.floor(Math.random() * 20 + 1);
+         var redNumGen = Math.floor(Math.random() * 20 + 1);
          //Select new target
-         var trgtGen = Math.floor(Math.random() * 175 + 30);  
+         var trgtGen = Math.floor(Math.random() * 175 + 30);   
+         //reset userNum
+         userNum = 0;
     }
-    //Add new userNum to users total
-    else {
-        $("totalBox").push(userNum);
+    //Push new userNum to users total
+    else  {
+        // $("totalBox").push(userNum + redNumGen);
+        $("#totalBox").html(userNum);
     }
 })
-//If Red Crystal Clicked
 $("#yellowCrystal").on("click", function() {
-    //Add Random number for yellow to userNum
-    userNum + yellowNumGen;
+    //Add Random number for red to 
+    userNum += window.yellowNumGen;
     //If userNum is equal to target
     if (userNum === trgtGen) {
         //alert win 
         alert("Hooray you won!");
         //wins goes up
         wins++;
-        //Select new red crystal number
+        //Select new crystal numbers
+        var redNumGen = Math.floor(Math.random() * 20 + 1);
         var yellowNumGen = Math.floor(Math.random() * 20 + 1);
+        var blueNumGen = Math.floor(Math.random() * 20 + 1);
+        var greenNumGen = Math.floor(Math.random() * 20 + 1);
         //Select new target
         var trgtGen = Math.floor(Math.random() * 175 + 30);
+        //reset userNum
+        userNum = 0;
     }
     //If userNum is larger than  
     else if (userNum > trgtGen) {
@@ -145,20 +160,21 @@ $("#yellowCrystal").on("click", function() {
          //alert loss
          alert("Sorry, you lost :(");
          //Select new red crystal number
-         var yellowNumGen = Math.floor(Math.random() * 20 + 1);
+         var redNumGen = Math.floor(Math.random() * 20 + 1);
          //Select new target
-         var trgtGen = Math.floor(Math.random() * 175 + 30); 
+         var trgtGen = Math.floor(Math.random() * 175 + 30);   
+         //reset userNum
+         userNum = 0;
     }
-    //Add new userNum to users total
-    else {
-        $("totalBox").push(userNum);
+    //Push new userNum to users total
+    else  {
+        // $("totalBox").push(userNum + redNumGen);
+        $("#totalBox").html(userNum);
     }
 })
 
 //html
 $("#number").html(trgtGen); 
-// $("#number").text(trgtGen);
-// $("#number").append(trgtGen);
 $("#scoreLossText").html("Losses: " + losses);
 $("#scoreWinText").html("Wins: " + wins);
 $("#redCrystal").html(redNumGen);
