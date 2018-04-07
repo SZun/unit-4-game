@@ -1,4 +1,3 @@
-
 var redNumGen = Math.floor(Math.random() * 20 + 1);
 var yellowNumGen = Math.floor(Math.random() * 20 + 1);
 var blueNumGen = Math.floor(Math.random() * 20 + 1);
@@ -32,7 +31,6 @@ function lose() {
         userNum = 0;
         $("#totalBox").html(userNum);
 }
-
 $(document).ready(function() {
 
 $(document).on("click", function() {
@@ -43,7 +41,7 @@ $(document).on("click", function() {
        lose();
     }
   })
-
+  
   $("#redCrystal").on("click", function() {
       userNum += window.redNumGen;
       $("#totalBox").html(userNum);
@@ -67,8 +65,4 @@ $(document).on("click", function() {
 $("#number").html(trgtGen); 
 $("#scoreLossText").html("Losses: " + losses);
 $("#scoreWinText").html("Wins: " + wins);
-$("#redCrystal").html(redNumGen);
-$("#blueCrystal").html(blueNumGen);
-$("#greenCrystal").html(greenNumGen);
-$("#yellowCrystal").html(yellowNumGen);
 });
