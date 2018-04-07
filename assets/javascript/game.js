@@ -1,3 +1,4 @@
+//Variables
 var redNumGen = Math.floor(Math.random() * 20 + 1);
 var yellowNumGen = Math.floor(Math.random() * 20 + 1);
 var blueNumGen = Math.floor(Math.random() * 20 + 1);
@@ -6,7 +7,7 @@ var trgtGen = Math.floor(Math.random() * 175 + 30);
 var wins = 0;
 var losses = 0;
 var userNum = 0;
-
+//Functions
 function winOrLoss() {
         window.redNumGen = Math.floor(Math.random() * 20 + 1);
         window.yellowNumGen = Math.floor(Math.random() * 20 + 1);
@@ -17,7 +18,7 @@ function winOrLoss() {
         userNum = 0;
         $("#totalBox").html(userNum);
 }
-
+//JQuery Functions
 $(document).ready(function() {
 
 $(document).on("click", function() {
