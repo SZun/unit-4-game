@@ -7,9 +7,7 @@ var wins = 0;
 var losses = 0;
 var userNum = 0;
 
-function win() {
-        window.wins++;
-        $("#scoreWinText").html("Wins: " + wins);
+function winOrLoss() {
         window.redNumGen = Math.floor(Math.random() * 20 + 1);
         window.yellowNumGen = Math.floor(Math.random() * 20 + 1);
         window.blueNumGen = Math.floor(Math.random() * 20 + 1);
@@ -19,29 +17,22 @@ function win() {
         userNum = 0;
         $("#totalBox").html(userNum);
 }
-function lose() {
-        window.losses++;
-        $("#scoreLossText").html("Losses: " + losses);
-        window.redNumGen = Math.floor(Math.random() * 20 + 1);
-        window.yellowNumGen = Math.floor(Math.random() * 20 + 1);
-        window.blueNumGen = Math.floor(Math.random() * 20 + 1);
-        window.greenNumGen = Math.floor(Math.random() * 20 + 1);
-        window.trgtGen = Math.floor(Math.random() * 175 + 30);  
-        $("#number").html(trgtGen); 
-        userNum = 0;
-        $("#totalBox").html(userNum);
-}
+
 $(document).ready(function() {
 
 $(document).on("click", function() {
     if (userNum === window.trgtGen) {
-        win();
+        winOrLoss();
+        window.wins++;
+        $("#scoreWinText").html("Wins: " + wins);
     }
     else if (userNum > window.trgtGen) {
-       lose();
+       winOrLoss();
+       window.losses++;
+        $("#scoreLossText").html("Losses: " + losses);
     }
   })
-  
+
   $("#redCrystal").on("click", function() {
       userNum += window.redNumGen;
       $("#totalBox").html(userNum);
