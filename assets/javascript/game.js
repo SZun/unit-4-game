@@ -1,35 +1,28 @@
-//Variables
-var redNumGen = Math.floor(Math.random() * 20 + 1);
-var yellowNumGen = Math.floor(Math.random() * 20 + 1);
-var blueNumGen = Math.floor(Math.random() * 20 + 1);
-var greenNumGen = Math.floor(Math.random() * 20 + 1);
-var trgtGen = Math.floor(Math.random() * 175 + 30);
-var wins = 0;
-var losses = 0;
-var userNum = 0;
 //Functions
-function winOrLoss() {
+function reset() {
         window.redNumGen = Math.floor(Math.random() * 20 + 1);
         window.yellowNumGen = Math.floor(Math.random() * 20 + 1);
         window.blueNumGen = Math.floor(Math.random() * 20 + 1);
         window.greenNumGen = Math.floor(Math.random() * 20 + 1);
         window.trgtGen = Math.floor(Math.random() * 175 + 30);
         $("#number").html(trgtGen); 
-        userNum = 0;
+        window.userNum = 0;
         $("#totalBox").html(userNum);
 }
-//JQuery Functions
+//Variables/JQuery Functions
 $(document).ready(function() {
-
+    reset();    
+    var wins = 0;
+    var losses = 0;
 $(document).on("click", function() {
     if (userNum === window.trgtGen) {
-        winOrLoss();
-        window.wins++;
+        reset();
+        wins++;
         $("#scoreWinText").html("Wins: " + wins);
     }
     else if (userNum > window.trgtGen) {
-       winOrLoss();
-       window.losses++;
+        reset();
+       losses++;
         $("#scoreLossText").html("Losses: " + losses);
     }
   })
@@ -53,7 +46,7 @@ $(document).on("click", function() {
       userNum += window.yellowNumGen;
       $("#totalBox").html(userNum);
   })
-
+//html
 $("#number").html(trgtGen); 
 $("#scoreLossText").html("Losses: " + losses);
 $("#scoreWinText").html("Wins: " + wins);
