@@ -1,4 +1,4 @@
-//Reset Function
+//Reset Functions
 function reset() {
         window.redNumGen = Math.floor(Math.random() * 20 + 1);
         window.yellowNumGen = Math.floor(Math.random() * 20 + 1);
