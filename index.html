@@ -23,32 +23,46 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"> 
-                <h1 id="headerText">CystalsCollector!</h1>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header"> 
+                <h1 id="headerText">Cystals Collector!</h1>
             </div>
         </div>
     </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 instructionsBox">
-                <p id="instructionsText">You will be given a random number at the start of the game.</p>
-                <p id="instructionsText">There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-                <p id="instructionsText">You win the game by matching your total score to random number, you loose the game if your ottal score goes above the random number.</p>
-                <p id="instructionsText">The value of each crystal is hidden from you until you click on it.</p>
-                <p id="instructionsText">Each time when the game starts, the game will change the values of each crystal</p>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 instructionsBox">
+                <li id="instructionsText">You will be given a random number at the start of the game.</li>
+                <li id="instructionsText">There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</li>
+                <li id="instructionsText">You win the game by matching your total score to random number, you loose the game if your ottal score goes above the random number.</li>
+                <li id="instructionsText">The value of each crystal is hidden from you until you click on it.</li>
+                <li id="instructionsText">Each time when the game starts, the game will change the values of each crystal</li>
             </div>
         </div>
     </div>
         
+<div class="container">
+    <div class="row winLossRow">
+   
+        
+
+       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 score">
+        <p id="scoreWinText"></p>
+    </div>
+
+       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 score">
+        <p id="scoreLossText"></p>
+    </div>
+
+        
+
+    </div>
+</div>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                 <h2 id="number">39</h2>
-                </div>
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 score">   
-                <p id="scoreWinText">Wins: </p>
-                <p id="scoreLossText">Losses: </p>
                 </div>
         </div>
     </div>
@@ -78,5 +92,8 @@
             </div>
     </div>
     </div>
+
+<img id="background" src="assets/images/rock_rainbow_bg.jpg" alt="Photo by Jeff Finley on Unsplash">
+
 </body>
 </html>
