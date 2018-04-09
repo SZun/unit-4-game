@@ -30,6 +30,10 @@ $(document).on("click", function() {
         $("#winLossText").html("You Lost :(").addClass("loser");
         $("#winLossBackup").html("Lost").addClass("loserBackup");
     }
+    else {
+        $("#winLossText").html("").removeClass("winner loser")
+        $("#winLossBackup").html("").removeClass("winnerBackup loserBackup")
+    }
   })
 
   $("#redCrystal").on("click", function() {
