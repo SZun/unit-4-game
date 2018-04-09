@@ -21,8 +21,7 @@ $(document).on("click", function() {
         wins++;
         $("#scoreWinText").html("Wins: " + wins);
         $("#winLossText").html("Winner!!!").addClass("winner");
-        $("#winLossBackup").html("Winner").addClass("winnerBackup");   
-        
+        $("#winLossBackup").html("Winner").addClass("winnerBackup");     
     }
     else if (userNum > window.trgtGen) {
         reset();

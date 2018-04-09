@@ -77,14 +77,14 @@
     font-size: 40px;
     text-align: center;
     color: #FFFFFF;
-    text-shadow: 1px 1px #000000;
+    text-shadow: 1px 2px #000000;
     margin-top: -2px;
 } 
 #scoreLossText {
     font-size: 40px;
     text-align: center;
     color: #FFFFFF;
-    text-shadow: 1px 1px #000000;
+    text-shadow: 1px 2px #000000;
     width: 365px;
     margin-top: -2px;
 } 
@@ -147,7 +147,7 @@
     margin-top: -155px;
     z-index: .5;
     color: rgba(255,0,0,.2);
-    animation: winMove 2s;
+    animation: win 2s;
     width: 100%;
     margin-left: 30px;
 }
@@ -160,10 +160,10 @@
     z-index: .5;
     margin-left: 80px;
     color: rgba(0,255,0,.2);
-    animation: loseMove 1.5s;
+    animation: lose 1.5s;
     width: 100%;
 }
-@keyframes loseMove {
+@keyframes lose {
     0%{
         letter-spacing: 0px
     }
@@ -171,7 +171,7 @@
         letter-spacing: 209px;
     }
 }
-@keyframes winMove {
+@keyframes win {
     0%{
         letter-spacing: 0px
     }
