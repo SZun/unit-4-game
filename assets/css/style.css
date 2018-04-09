@@ -4,7 +4,7 @@
 }
 #background {
     z-index: 0;
-    margin-top: -100%;
+    margin-top: -118%;
     width: 100%;
 }
 .header {
@@ -46,6 +46,7 @@
     font-size: 50px;
     margin-left: 17px;
     margin-top: 0;
+    line-height: 85px;
 }
 .trgtBgrnd {
     background: linear-gradient(to right, rgba(255,0,0,.3) 0%,rgba(0,8,252,.3) 36%,rgba(255,255,0,.3) 60%,rgba(0,244,16,.3) 100%);
@@ -103,6 +104,7 @@
     text-shadow: 2px 2px #000000;
     margin-left: 10px;
     margin-top: 0;
+    line-height: 85px;
 }
 #redCrystal {
     margin-left: -2px;
@@ -120,4 +122,43 @@
     margin-top: 12px;
     margin-left: 25px;
 } 
+.winner {
+    text-align: center;
+    font-size: 100px;
+    color: #FF0000;
+    transition: opacity 3.5s ;
+    opacity: 0;
+    margin: 0;
+}
+.loser {
+    text-align: center;
+    font-size: 100px;
+    color: #00FF00;
+    transition: opacity 3.5s; 
+    opacity: 0;
+    margin: 0;
+}
+.winnerBackup {
+    text-align: center;
+    font-size: 150px;
+    letter-spacing: 40px;
+    color: #FF0000;
+    transition: opacity 3.5s; 
+    opacity: 0;
+    margin-top: -155px;
+    z-index: .5;
+}
+.loserBackup {
+    text-align: center;
+    font-size: 150px;
+    letter-spacing: 80px;
+    color: #00FF00;
+    transition: opacity 3.5s; 
+    opacity: 0;
+    margin-top: -142px;
+    z-index: .5;
 
+}
+#winLossText {
+    margin: 0;
+}

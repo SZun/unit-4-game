@@ -7,7 +7,7 @@ function reset() {
         window.trgtGen = Math.floor(Math.random() * 175 + 30);
         $("#number").html("Target <br>" + trgtGen); 
         window.userNum = 0;
-        $("#totalNumber").html("Total <br>" + userNum);
+        $("#totalNumber").html("Total <br>" + userNum);      
 }
 //Variables/JQuery Functions
 $(document).ready(function() {
@@ -15,15 +15,20 @@ $(document).ready(function() {
     var wins = 0;
     var losses = 0;
 $(document).on("click", function() {
+    $("#winLossText").html();
     if (userNum === window.trgtGen) {
         reset();
         wins++;
         $("#scoreWinText").html("Wins: " + wins);
+        $("#winLossText").html("Winner!!!").addClass("winner");
+        $("#winLossBackup").html("Winner!!!").addClass("winnerBackup");
     }
     else if (userNum > window.trgtGen) {
         reset();
        losses++;
         $("#scoreLossText").html("Losses: " + losses);
+        $("#winLossText").html("You Lost :(").addClass("loser");
+        $("#winLossBackup").html("Lost").addClass("loserBackup");
     }
   })
 
