@@ -51,18 +51,26 @@ body {
 #number {
     color: #FFFFFF;
     text-shadow: 2px 2px #000000;
+    text-align: center;
+    font-size: 50px;
+    margin-left: 17px;
+    margin-top: 0;
+}
+.trgtBgrnd {
     background: linear-gradient(to right, rgba(255,0,0,1) 0%,rgba(0,8,252,1) 36%,rgba(255,255,0,1) 60%,rgba(0,244,16,1) 100%);
-    height: 100px;
+    height: 175px;
     margin-top: 10px;
     margin-bottom: 15px;
     padding-left: 4px;
-    width: 200px;
+    width: 175px;
+    opacity: .3;
+    margin-left: 23.1%;
 }
 
 .crystals {
-    height: 80px;
-    width: 80px;
-    margin-top: -5px;
+    height: 125px;
+    width: 125px;
+    margin-top: 10px;
     margin-bottom: 7px;
 }
 .winLossRow {
@@ -83,7 +91,7 @@ body {
     color: #FFFFFF;
     text-shadow: 1px 1px #000000;
     opacity: 1;
-    margin-top: -1px;
+    margin-top: -2px;
 } 
 #scoreLossText {
     /* margin-top: 20px;  */
@@ -93,38 +101,40 @@ body {
     text-shadow: 1px 1px #000000;
     opacity: 1;
     width: 365px;
-    margin-top: -1px;
+    margin-top: -2px;
 } 
-#totalHeader {
-    text-align: left;
-    width: 210px;
-    color: #FFFFFF;
-    text-shadow: 1px 1px #000000;
-    background: linear-gradient(to right, rgba(255,0,0,1) 0%,rgba(0,8,252,1) 36%,rgba(255,255,0,1) 60%,rgba(0,244,16,1) 100%);
-    height: 20px;
+.totalBox {
     padding-left: 4px;
-    margin-bottom: 0px;
-}
-#totalBox {
-    text-align: left;
-    padding-left: 4px;
-    color: #FFFFFF;
-    text-shadow: 2px 2px #000000;
     background: linear-gradient(to right, rgba(255,0,0,1) 0%,rgba(0,8,252,1) 36%,rgba(255,255,0,1) 60%,rgba(0,244,16,1) 100%);
-    width: 210px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
     margin-top: 10px;
     margin-bottom: 20px;
+    opacity: .3;
+    margin-left: 6%
+}
+#totalNumber {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 50px;
+    text-shadow: 2px 2px #000000;
+    margin-left: 10px;
+    margin-top: 0;
 }
 #redCrystal {
-    
+    margin-left: -2px;
+    margin-top: -9px;
 } 
 #blueCrystal {
-    margin-left: -12px
+    margin-left: 17px;
+    margin-top: -8px;
 } 
 #yellowCrystal {
-    margin-left: -23px;
+    margin-top: 5px;
+    margin-left: 2px;
 } 
 #greenCrystal {
-    margin-left: -35px;
+    margin-top: 12px;
+    margin-left: 25px;
 } 
+

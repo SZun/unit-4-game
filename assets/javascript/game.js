@@ -5,9 +5,9 @@ function reset() {
         window.blueNumGen = Math.floor(Math.random() * 20 + 1);
         window.greenNumGen = Math.floor(Math.random() * 20 + 1);
         window.trgtGen = Math.floor(Math.random() * 175 + 30);
-        $("#number").html(trgtGen); 
+        $("#number").html("Target <br>" + trgtGen); 
         window.userNum = 0;
-        $("#totalBox").html(userNum);
+        $("#totalNumber").html("Total <br>" + userNum);
 }
 //Variables/JQuery Functions
 $(document).ready(function() {
@@ -29,25 +29,24 @@ $(document).on("click", function() {
 
   $("#redCrystal").on("click", function() {
       userNum += window.redNumGen;
-      $("#totalBox").html(userNum);
+      $("#totalNumber").html("Total <br>" + userNum);
   })
 
   $("#blueCrystal").on("click", function() {
       userNum += window.blueNumGen;
-      $("#totalBox").html(userNum);
+      $("#totalNumber").html("Total <br>" + userNum);
   })
 
   $("#greenCrystal").on("click", function() {
       userNum += window.greenNumGen;
-      $("#totalBox").html(userNum);
+      $("#totalNumber").html("Total <br>" + userNum);
   })
 
   $("#yellowCrystal").on("click", function() {
       userNum += window.yellowNumGen;
-      $("#totalBox").html(userNum);
+      $("#totalNumber").html("Total <br>" + userNum);
   })
 //html
-$("#number").html(trgtGen); 
 $("#scoreLossText").html("Losses: " + losses);
 $("#scoreWinText").html("Wins: " + wins);
 });
