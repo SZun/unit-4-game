@@ -4,7 +4,7 @@
 }
 #background {
     z-index: 0;
-    margin-top: -118%;
+    margin-top: -117%;
     width: 100%;
 }
 .header {
@@ -142,23 +142,42 @@
 .winnerBackup {
     text-align: center;
     font-size: 150px;
-    letter-spacing: 40px;
-    color: #FF0000;
-    transition: opacity 3.5s; 
+    transition: opacity 2s; 
     opacity: 0;
     margin-top: -155px;
     z-index: .5;
+    color: rgba(255,0,0,.2);
+    animation: winMove 2s;
+    width: 100%;
+    margin-left: 30px;
 }
 .loserBackup {
     text-align: center;
     font-size: 150px;
-    letter-spacing: 100px;
-    color: #00FF00;
-    transition: opacity 3.5s; 
-    opacity: 0;
+    transition: opacity 2s;  
+    opacity: 0; 
     margin-top: -142px;
     z-index: .5;
-    margin-left: 100px;
+    margin-left: 80px;
+    color: rgba(0,255,0,.2);
+    animation: loseMove 1.5s;
+    width: 100%;
+}
+@keyframes loseMove {
+    0%{
+        letter-spacing: 0px
+    }
+    100%{
+        letter-spacing: 209px;
+    }
+}
+@keyframes winMove {
+    0%{
+        letter-spacing: 0px
+    }
+    100%{
+        letter-spacing: 120px;
+    }
 }
 #winLossText {
     margin: 0;
