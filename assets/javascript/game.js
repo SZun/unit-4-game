@@ -1,10 +1,10 @@
 //Reset Functions
 function reset() {
-    window.redNumGen = Math.floor(Math.random() * 20 + 1);
-    window.yellowNumGen = Math.floor(Math.random() * 20 + 1);
-    window.blueNumGen = Math.floor(Math.random() * 20 + 1);
-    window.greenNumGen = Math.floor(Math.random() * 20 + 1);
-    window.trgtGen = Math.floor(Math.random() * 175 + 30);
+    window.redNumGen = Math.floor(Math.random() * 12) + 1;
+    window.yellowNumGen = Math.floor(Math.random() * 12) + 1;
+    window.blueNumGen = Math.floor(Math.random() * 12) + 1;
+    window.greenNumGen = Math.floor(Math.random() * 12) + 1;
+    window.trgtGen = Math.floor(Math.random() * ((120-19)+1) + 19);
     $("#trgt").html("Target <br>" + trgtGen); 
     window.userNum = 0;
     $("#total").html("Total <br>" + userNum);              
@@ -14,6 +14,7 @@ $(document).ready(function() {
 reset();    
 var wins = 0;
 var losses = 0;
+console.log(redNumGen,blueNumGen,greenNumGen,yellowNumGen)
 $(document).on("click", function() {
 $("#winLossText").html();
 if (userNum === window.trgtGen) {
