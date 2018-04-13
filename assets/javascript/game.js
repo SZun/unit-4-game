@@ -14,7 +14,6 @@ $(document).ready(function() {
 reset();    
 var wins = 0;
 var losses = 0;
-console.log(redNumGen,blueNumGen,greenNumGen,yellowNumGen)
 $(document).on("click", function() {
 $("#winLossText").html();
 if (userNum === window.trgtGen) {
